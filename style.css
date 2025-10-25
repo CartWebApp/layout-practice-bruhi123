@@ -236,6 +236,8 @@ article {
 }
 
 .Two {
+    display:flex;
+    flex-direction:column;
     grid-column: 3 / 4;
     background-color: lightgrey;
     margin-top: 50px;
@@ -248,17 +250,21 @@ article {
 }
 
 .Four {
+    display:flex;
+    flex-direction:column;
     grid-column: 5 / 6;
     background-color: lightgrey;
     margin-top: 50px;
 }
 
 .Big {
+    display:flex;
+    flex-direction:column;
     grid-column: 2 / 6;
     background-color: lightgrey;
 }
 
-.One img, .Two img, .Three img, .Four img {
+.One img, .Two img, .Three img, .Four img, .Big img {
     width: 100%;
 }
 
@@ -304,7 +310,7 @@ article {
     border: solid 1px grey;
     text-decoration: none;
     color: grey;
-    border-radius: 5px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -312,6 +318,124 @@ article {
     margin-left: 10px;
 }
 
-.TwoA, .FourA, .BigA {
-    align-self:center
+.TwoA, .FourA {
+    align-self: center;
+    margin-bottom: 4%;
+}
+
+.BigA {
+    margin-bottom: 2%;
+    align-self: flex-start;
+}
+
+footer {
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+footer {
+    background-image: url("layout-01-assets/img14.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+}
+
+.Contact h2 {
+    color: white;
+    font-size: 40px;
+    font-weight: normal;
+    text-shadow: 1px 1px 2px black;
+}
+
+.Contact p {
+    color:#494949;
+    max-width: 650px;
+    margin: 20px auto;
+    line-height: 1.6;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.FormBoxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "name message"
+    "email message"
+    "subject message"
+    "send send";
+    gap: 0px 20px;
+    max-width: 900px;
+    margin: 50px auto 0 auto;
+    align-items: start;
+}
+
+.box1 { 
+    grid-area: name; 
+}
+.box2 { 
+    grid-area: email; 
+}
+.box3 { 
+    grid-area: subject; 
+}
+.bigBox { 
+    grid-area: message; 
+}
+.Send { 
+    grid-area: send; 
+}
+
+.box1, .box2, .box3, .bigBox {
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: left;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.bigBox {
+    height: 175px;
+}
+
+.Send {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 35px;
+    border-radius: 5px;
+    font-weight: bold;
+    justify-self: center;
+    align-self: center;
+}
+
+.FooterStart {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 60px 0 40px 0;
+}
+
+.FooterStart h3 {
+    font-style: italic;
+    font-weight: normal;
+    color: #696969;
+    font-size: 28px;
+}
+
+.FooterStart p {
+    font-style: italic;
+    color: #acacac;
+}
+
+.FooterEnd {
+    border-top: solid 1px #e1e1e1;
+    text-align: center;
+    font-size: 12px;
+    color: #acacac;
+    padding: 15px 0 25px 0;
+    background-color: white;
 }
